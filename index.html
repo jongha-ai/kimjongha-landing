@@ -16,15 +16,84 @@ body{font-family:Georgia,'Batang','Times New Roman',serif;background:#0D1B3E;col
 .fu3{animation:fadeUp .7s .35s both;}
 .fu4{animation:fadeUp .7s .5s both;}
 
-/* 버튼 */
-.btn-yellow{display:inline-block;background:#FEE500;color:#111;border:none;padding:13px 26px;font-size:15px;font-family:Georgia,serif;font-weight:700;cursor:pointer;border-radius:4px;letter-spacing:1px;text-decoration:none;}
-.btn-yellow:hover{background:#F0D800;}
-.btn-outline{display:inline-block;background:transparent;color:#C9A84C;border:3px solid #C9A84C;padding:10px 26px;font-size:15px;font-family:Georgia,serif;font-weight:700;cursor:pointer;border-radius:4px;letter-spacing:1px;text-decoration:none;}
-.btn-outline:hover{background:#C9A84C;color:#0D1B3E;}
-.btn-yellow-full{display:block;width:100%;background:#FEE500;color:#111;border:none;padding:15px;font-size:15px;font-family:Georgia,serif;font-weight:700;cursor:pointer;border-radius:4px;text-align:center;text-decoration:none;}
-.btn-yellow-full:hover{background:#F0D800;}
-.btn-gold-full{display:block;width:100%;background:transparent;color:#C9A84C;border:3px solid #C9A84C;padding:12px;font-size:15px;font-family:Georgia,serif;font-weight:700;cursor:pointer;border-radius:4px;text-align:center;text-decoration:none;}
-.btn-gold-full:hover{background:#C9A84C;color:#0D1B3E;}
+/* 버튼 — !important로 모바일 렌더링 강제 */
+.btn-yellow{
+  display:inline-block !important;
+  background-color:#FEE500 !important;
+  color:#111111 !important;
+  border:none !important;
+  padding:13px 26px !important;
+  font-size:15px !important;
+  font-family:Arial,sans-serif !important;
+  font-weight:700 !important;
+  cursor:pointer !important;
+  border-radius:4px !important;
+  letter-spacing:1px !important;
+  text-decoration:none !important;
+  -webkit-appearance:none !important;
+}
+.btn-call{
+  display:inline-block !important;
+  background-color:#FEE500 !important;
+  color:#111111 !important;
+  border:none !important;
+  padding:13px 26px !important;
+  font-size:15px !important;
+  font-family:Arial,sans-serif !important;
+  font-weight:700 !important;
+  cursor:pointer !important;
+  border-radius:4px !important;
+  letter-spacing:1px !important;
+  text-decoration:none !important;
+  -webkit-appearance:none !important;
+}
+.btn-outline{
+  display:inline-block !important;
+  background-color:transparent !important;
+  color:#C9A84C !important;
+  border:3px solid #C9A84C !important;
+  padding:10px 26px !important;
+  font-size:15px !important;
+  font-family:Arial,sans-serif !important;
+  font-weight:700 !important;
+  cursor:pointer !important;
+  border-radius:4px !important;
+  letter-spacing:1px !important;
+  text-decoration:none !important;
+  -webkit-appearance:none !important;
+}
+.btn-kakao-full{
+  display:block !important;
+  width:100% !important;
+  background-color:#FEE500 !important;
+  color:#111111 !important;
+  border:none !important;
+  padding:15px !important;
+  font-size:15px !important;
+  font-family:Arial,sans-serif !important;
+  font-weight:700 !important;
+  cursor:pointer !important;
+  border-radius:4px !important;
+  text-align:center !important;
+  text-decoration:none !important;
+  -webkit-appearance:none !important;
+}
+.btn-call-full{
+  display:block !important;
+  width:100% !important;
+  background-color:transparent !important;
+  color:#C9A84C !important;
+  border:3px solid #C9A84C !important;
+  padding:12px !important;
+  font-size:15px !important;
+  font-family:Arial,sans-serif !important;
+  font-weight:700 !important;
+  cursor:pointer !important;
+  border-radius:4px !important;
+  text-align:center !important;
+  text-decoration:none !important;
+  -webkit-appearance:none !important;
+}
 
 /* 서비스 카드 */
 .svc{background:rgba(255,255,255,.06);border:2px solid rgba(201,168,76,.3);border-radius:6px;padding:20px;margin-bottom:12px;cursor:pointer;transition:border-color .2s;}
@@ -40,13 +109,13 @@ body{font-family:Georgia,'Batang','Times New Roman',serif;background:#0D1B3E;col
 .stat-n{font-size:34px;font-weight:700;color:#C9A84C;font-style:italic;}
 .stat-l{font-size:11px;color:rgba(245,240,232,.5);letter-spacing:2px;text-transform:uppercase;margin-top:6px;}
 
-/* 반응형 */
 @media(max-width:640px){
   h1{font-size:40px !important;}
   .stats{grid-template-columns:repeat(2,1fr);}
   .stat:nth-child(2){border-right:none;}
   .stat:nth-child(3){border-top:1px solid rgba(201,168,76,.2);}
   .cta-grid{grid-template-columns:1fr !important;}
+  .qr-section{display:none !important;}
 }
 </style>
 </head>
@@ -67,10 +136,12 @@ body{font-family:Georgia,'Batang','Times New Roman',serif;background:#0D1B3E;col
     </p>
   </div>
   <div class="fu4" style="display:flex;gap:12px;flex-wrap:wrap;">
+    <!-- 상단 버튼 1: 카카오톡 오픈채팅 -->
     <div>
       <a href="https://open.kakao.com/o/g2tW3xvi" target="_blank" class="btn-yellow">💬 카카오톡 상담 신청</a>
       <p style="font-size:11px;color:rgba(245,240,232,.45);margin-top:6px;text-align:center;">카카오톡 오픈채팅</p>
     </div>
+    <!-- 상단 버튼 2: 강의 일정 -->
     <div>
       <a href="https://brunch.co.kr/brunchbook/late-start" target="_blank" class="btn-outline">📖 강의 일정 보기</a>
       <p style="font-size:11px;color:rgba(245,240,232,.45);margin-top:6px;text-align:center;">일정 안내</p>
@@ -170,16 +241,22 @@ body{font-family:Georgia,'Batang','Times New Roman',serif;background:#0D1B3E;col
         AI, 저와 함께라면<br><span class="gold">오늘 바로 씁니다</span>
       </h2>
       <p style="font-size:14px;color:#B0A898;margin-bottom:24px;line-height:1.8;">어떤 방식이든 편하신 대로 연락 주세요.</p>
+
+      <!-- 하단 버튼 1: 전화/문자 -->
       <div style="margin-bottom:12px;">
-        <a href="https://open.kakao.com/o/g2tW3xvi" target="_blank" class="btn-yellow-full">💬 카카오톡으로 상담 신청</a>
-        <p style="font-size:11px;color:rgba(245,240,232,.4);margin-top:6px;">문자처럼 편하게 · 오픈채팅 연결</p>
+        <a href="tel:01022274898" class="btn-kakao-full">📞 전화 또는 문자 상담</a>
+        <p style="font-size:11px;color:rgba(245,240,232,.4);margin-top:6px;">전화 · 문자 모두 가능 &nbsp;|&nbsp; 010-2227-4898</p>
       </div>
+
+      <!-- 하단 버튼 3: 이메일 -->
       <div>
-        <a href="mailto:sangsang_26@naver.com" class="btn-gold-full">✉ 이메일로 상담 문의</a>
+        <a href="mailto:sangsang_26@naver.com" class="btn-call-full">✉ 이메일로 상담 문의</a>
         <p style="font-size:11px;color:rgba(245,240,232,.4);margin-top:6px;">sangsang_26@naver.com</p>
       </div>
     </div>
-    <div style="text-align:center;">
+
+    <!-- QR (PC에서만 표시) -->
+    <div class="qr-section" style="text-align:center;">
       <div style="background:rgba(255,255,255,.05);border:2px solid rgba(201,168,76,.4);border-radius:8px;padding:24px;display:inline-block;">
         <p style="font-size:11px;color:rgba(245,240,232,.5);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">카카오톡 오픈채팅 QR</p>
         <div id="qrcode"></div>
@@ -207,12 +284,15 @@ function tog(i){
   c.style.color=isOpen?'rgba(201,168,76,.6)':'#C9A84C';
   oi=isOpen?null:i;
 }
-new QRCode(document.getElementById('qrcode'),{
-  text:'https://open.kakao.com/o/g2tW3xvi',
-  width:130,height:130,
-  colorDark:'#0D1B3E',colorLight:'#F5F0E8',
-  correctLevel:QRCode.CorrectLevel.H
-});
+var qrEl=document.getElementById('qrcode');
+if(qrEl){
+  new QRCode(qrEl,{
+    text:'https://open.kakao.com/o/g2tW3xvi',
+    width:130,height:130,
+    colorDark:'#0D1B3E',colorLight:'#F5F0E8',
+    correctLevel:QRCode.CorrectLevel.H
+  });
+}
 </script>
 </body>
 </html>
