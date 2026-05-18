@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김종하 — AI 인생 2막</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Georgia,'Batang','Times New Roman',serif;background:#0D1B3E;color:#F5F0E8;}
+.gold{color:#C9A84C;}
+.divider{width:40px;height:2px;background:#C9A84C;margin:16px 0;}
+.hr{border:none;border-top:1px solid rgba(201,168,76,0.25);}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.fu1{animation:fadeUp .7s .05s both;}
+.fu2{animation:fadeUp .7s .2s both;}
+.fu3{animation:fadeUp .7s .35s both;}
+.fu4{animation:fadeUp .7s .5s both;}
+
+/* 버튼 */
+.btn-yellow{display:inline-block;background:#FEE500;color:#111;border:none;padding:13px 26px;font-size:15px;font-family:Georgia,serif;font-weight:700;cursor:pointer;border-radius:4px;letter-spacing:1px;text-decoration:none;}
+.btn-yellow:hover{background:#F0D800;}
+.btn-outline{display:inline-block;background:transparent;color:#C9A84C;border:3px solid #C9A84C;padding:10px 26px;font-size:15px;font-family:Georgia,serif;font-weight:700;cursor:pointer;border-radius:4px;letter-spacing:1px;text-decoration:none;}
+.btn-outline:hover{background:#C9A84C;color:#0D1B3E;}
+.btn-yellow-full{display:block;width:100%;background:#FEE500;color:#111;border:none;padding:15px;font-size:15px;font-family:Georgia,serif;font-weight:700;cursor:pointer;border-radius:4px;text-align:center;text-decoration:none;}
+.btn-yellow-full:hover{background:#F0D800;}
+.btn-gold-full{display:block;width:100%;background:transparent;color:#C9A84C;border:3px solid #C9A84C;padding:12px;font-size:15px;font-family:Georgia,serif;font-weight:700;cursor:pointer;border-radius:4px;text-align:center;text-decoration:none;}
+.btn-gold-full:hover{background:#C9A84C;color:#0D1B3E;}
+
+/* 서비스 카드 */
+.svc{background:rgba(255,255,255,.06);border:2px solid rgba(201,168,76,.3);border-radius:6px;padding:20px;margin-bottom:12px;cursor:pointer;transition:border-color .2s;}
+.svc:hover{border-color:#C9A84C;}
+.svc-icon{width:44px;height:44px;border-radius:4px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;}
+.tag{font-size:10px;padding:2px 8px;border:1px solid #C9A84C;color:#C9A84C;border-radius:2px;letter-spacing:1px;}
+.svc-body{font-size:14px;color:#B0A898;line-height:1.8;margin-top:10px;border-top:1px solid rgba(201,168,76,.2);padding-top:10px;display:none;}
+
+/* 통계 */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);}
+.stat{text-align:center;padding:28px 12px;border-right:1px solid rgba(201,168,76,.2);}
+.stat:last-child{border-right:none;}
+.stat-n{font-size:34px;font-weight:700;color:#C9A84C;font-style:italic;}
+.stat-l{font-size:11px;color:rgba(245,240,232,.5);letter-spacing:2px;text-transform:uppercase;margin-top:6px;}
+
+/* 반응형 */
+@media(max-width:640px){
+  h1{font-size:40px !important;}
+  .stats{grid-template-columns:repeat(2,1fr);}
+  .stat:nth-child(2){border-right:none;}
+  .stat:nth-child(3){border-top:1px solid rgba(201,168,76,.2);}
+  .cta-grid{grid-template-columns:1fr !important;}
+}
+</style>
+</head>
+<body>
+
+<!-- 히어로 -->
+<section style="padding:60px 32px 48px;max-width:860px;margin:0 auto;">
+  <p class="fu1" style="font-size:11px;letter-spacing:4px;color:#C9A84C;text-transform:uppercase;margin-bottom:28px;">AI 컨설턴트 &amp; 강사 · 김종하</p>
+  <h1 class="fu2" style="font-size:60px;line-height:1.1;font-weight:700;margin-bottom:20px;color:#F5F0E8;letter-spacing:-1px;">
+    AI가<br><span class="gold">두렵다면</span><br>저를 찾으세요
+  </h1>
+  <div class="fu3">
+    <div class="divider"></div>
+    <p style="font-size:16px;color:#B0A898;line-height:1.9;max-width:480px;margin-bottom:32px;">
+      AI는 배우는 게 아닙니다. <strong style="color:#F5F0E8;">쓰는 겁니다.</strong><br>
+      60대에 시작해 400만 뷰와 애드센스를 만든 사람이<br>
+      당신 곁에서 직접 보여드립니다.
+    </p>
+  </div>
+  <div class="fu4" style="display:flex;gap:12px;flex-wrap:wrap;">
+    <div>
+      <a href="https://open.kakao.com/o/g2tW3xvi" target="_blank" class="btn-yellow">💬 카카오톡 상담 신청</a>
+      <p style="font-size:11px;color:rgba(245,240,232,.45);margin-top:6px;text-align:center;">카카오톡 오픈채팅</p>
+    </div>
+    <div>
+      <a href="https://brunch.co.kr/brunchbook/late-start" target="_blank" class="btn-outline">📖 강의 일정 보기</a>
+      <p style="font-size:11px;color:rgba(245,240,232,.45);margin-top:6px;text-align:center;">일정 안내</p>
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- 통계 -->
+<div style="background:rgba(0,0,0,.25);">
+  <div class="stats" style="max-width:860px;margin:0 auto;">
+    <div class="stat"><div class="stat-n">400만+</div><div class="stat-l">유튜브 누적 조회수</div></div>
+    <div class="stat"><div class="stat-n">3개월</div><div class="stat-l">국토부 우수 블로거</div></div>
+    <div class="stat"><div class="stat-n">20년</div><div class="stat-l">패션·유통 현장 경력</div></div>
+    <div class="stat"><div class="stat-n">1호</div><div class="stat-l">카톡 AI 실전 전문가</div></div>
+  </div>
+</div>
+
+<hr class="hr">
+
+<!-- 서비스 -->
+<section style="padding:48px 32px;max-width:860px;margin:0 auto;">
+  <p style="font-size:11px;letter-spacing:4px;color:#C9A84C;text-transform:uppercase;margin-bottom:8px;">서비스</p>
+  <h2 style="font-size:32px;font-weight:700;color:#F5F0E8;margin-bottom:28px;">현장에서 바로 쓰는 AI</h2>
+
+  <div class="svc" onclick="tog(0)">
+    <div style="display:flex;gap:14px;align-items:flex-start;">
+      <div class="svc-icon">📱</div>
+      <div style="flex:1;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap;">
+          <span style="font-size:15px;font-weight:700;color:#F5F0E8;">카카오톡 AI 실전 교육</span>
+          <span class="tag">대표 강좌</span>
+        </div>
+        <p style="font-size:12px;color:rgba(245,240,232,.5);font-style:italic;">시니어도 5분 만에 시작</p>
+        <div id="d0" class="svc-body">별도 앱 설치 없이 카카오톡 하나로 AI를 바로 씁니다. 손자 숙제 도움부터 사진 인식, AI 이미지 생성까지 — 어르신도 첫 수업에 성공 경험을 가져갑니다.</div>
+      </div>
+      <span id="c0" style="font-size:18px;color:rgba(201,168,76,.6);flex-shrink:0;">▼</span>
+    </div>
+  </div>
+
+  <div class="svc" onclick="tog(1)">
+    <div style="display:flex;gap:14px;align-items:flex-start;">
+      <div class="svc-icon">🏪</div>
+      <div style="flex:1;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap;">
+          <span style="font-size:15px;font-weight:700;color:#F5F0E8;">소상공인 AI 전환 컨설팅</span>
+          <span class="tag">현장 구축</span>
+        </div>
+        <p style="font-size:12px;color:rgba(245,240,232,.5);font-style:italic;">도구만 알려드리는 게 아닙니다</p>
+        <div id="d1" class="svc-body">메뉴 설명 생성기, 리뷰 답변 자동화, SNS 콘텐츠 제작 — 현장에서 바로 돌아가는 맞춤 AI 시스템을 만들어 드립니다. 컨설팅이 끝나도 혼자 쓸 수 있습니다.</div>
+      </div>
+      <span id="c1" style="font-size:18px;color:rgba(201,168,76,.6);flex-shrink:0;">▼</span>
+    </div>
+  </div>
+
+  <div class="svc" onclick="tog(2)">
+    <div style="display:flex;gap:14px;align-items:flex-start;">
+      <div class="svc-icon">👥</div>
+      <div style="flex:1;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap;">
+          <span style="font-size:15px;font-weight:700;color:#F5F0E8;">인생 2막 AI 설계</span>
+          <span class="tag">1:1 코칭</span>
+        </div>
+        <p style="font-size:12px;color:rgba(245,240,232,.5);font-style:italic;">시니어 특화 1:1 코칭</p>
+        <div id="d2" class="svc-body">60대에 국토교통부 우수 블로거, 유튜브 400만 뷰, 애드센스 승인. 제가 직접 걸어온 길을 로드맵으로 만들어 드립니다. AI로 새 커리어를 시작하고 싶은 분께.</div>
+      </div>
+      <span id="c2" style="font-size:18px;color:rgba(201,168,76,.6);flex-shrink:0;">▼</span>
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- 이야기 -->
+<section style="padding:48px 32px;background:rgba(0,0,0,.2);text-align:center;">
+  <div style="max-width:580px;margin:0 auto;">
+    <p style="font-size:11px;letter-spacing:4px;color:#C9A84C;text-transform:uppercase;margin-bottom:16px;">이야기</p>
+    <blockquote style="font-size:28px;font-style:italic;color:#F5F0E8;line-height:1.6;margin-bottom:16px;font-weight:700;">"AI로 세대를 잇다"</blockquote>
+    <p style="font-size:14px;color:#B0A898;line-height:1.9;margin-bottom:24px;">
+      블로그 한 번 안 써본 60대가 AI와 함께 시작했습니다.<br>
+      국토교통부 우수 블로거, 유튜브 400만 뷰, 애드센스 수익,<br>
+      기업 로고송 채택 — 모두 AI가 함께한 인생 2막의 결과입니다.
+    </p>
+    <a href="https://brunch.co.kr/brunchbook/late-start" target="_blank" style="font-size:13px;color:#C9A84C;letter-spacing:2px;text-decoration:none;border-bottom:1px solid rgba(201,168,76,.5);padding-bottom:2px;">브런치에서 전체 이야기 읽기 →</a>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- CTA -->
+<section style="padding:48px 32px;max-width:860px;margin:0 auto;">
+  <div class="cta-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+    <div>
+      <p style="font-size:11px;letter-spacing:4px;color:#C9A84C;text-transform:uppercase;margin-bottom:14px;">지금 시작하기</p>
+      <h2 style="font-size:32px;font-weight:700;color:#F5F0E8;margin-bottom:14px;line-height:1.35;">
+        AI, 저와 함께라면<br><span class="gold">오늘 바로 씁니다</span>
+      </h2>
+      <p style="font-size:14px;color:#B0A898;margin-bottom:24px;line-height:1.8;">어떤 방식이든 편하신 대로 연락 주세요.</p>
+      <div style="margin-bottom:12px;">
+        <a href="https://open.kakao.com/o/g2tW3xvi" target="_blank" class="btn-yellow-full">💬 카카오톡으로 상담 신청</a>
+        <p style="font-size:11px;color:rgba(245,240,232,.4);margin-top:6px;">문자처럼 편하게 · 오픈채팅 연결</p>
+      </div>
+      <div>
+        <a href="mailto:sangsang_26@naver.com" class="btn-gold-full">✉ 이메일로 상담 문의</a>
+        <p style="font-size:11px;color:rgba(245,240,232,.4);margin-top:6px;">sangsang_26@naver.com</p>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <div style="background:rgba(255,255,255,.05);border:2px solid rgba(201,168,76,.4);border-radius:8px;padding:24px;display:inline-block;">
+        <p style="font-size:11px;color:rgba(245,240,232,.5);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">카카오톡 오픈채팅 QR</p>
+        <div id="qrcode"></div>
+        <p style="font-size:13px;color:#C9A84C;margin-top:12px;font-weight:700;">카메라로 스캔하세요</p>
+        <p style="font-size:11px;color:rgba(245,240,232,.35);margin-top:4px;">김종하의 AI 인생 2막</p>
+      </div>
+    </div>
+  </div>
+  <p style="font-size:11px;color:rgba(245,240,232,.2);margin-top:48px;text-align:center;letter-spacing:2px;">© 2025 김종하 AI 컨설팅 · 상상우리</p>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+var oi=null;
+function tog(i){
+  if(oi!==null&&oi!==i){
+    document.getElementById('d'+oi).style.display='none';
+    document.getElementById('c'+oi).textContent='▼';
+    document.getElementById('c'+oi).style.color='rgba(201,168,76,.6)';
+  }
+  var d=document.getElementById('d'+i),c=document.getElementById('c'+i);
+  var isOpen=d.style.display==='block';
+  d.style.display=isOpen?'none':'block';
+  c.textContent=isOpen?'▼':'▲';
+  c.style.color=isOpen?'rgba(201,168,76,.6)':'#C9A84C';
+  oi=isOpen?null:i;
+}
+new QRCode(document.getElementById('qrcode'),{
+  text:'https://open.kakao.com/o/g2tW3xvi',
+  width:130,height:130,
+  colorDark:'#0D1B3E',colorLight:'#F5F0E8',
+  correctLevel:QRCode.CorrectLevel.H
+});
+</script>
+</body>
+</html>
