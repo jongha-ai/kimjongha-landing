@@ -233,6 +233,37 @@ a{-webkit-text-fill-color:inherit;}
 
 <hr class="hr">
 
+<!-- 공유 -->
+<section style="padding:32px;max-width:860px;margin:0 auto;text-align:center;">
+  <p class="rv" style="font-size:11px;letter-spacing:4px;color:#C9A84C;text-transform:uppercase;margin-bottom:12px;">공유하기</p>
+  <p class="rv t1" style="font-size:14px;color:#B0A898;margin-bottom:20px;">이 페이지가 도움이 됐다면 주변에 공유해 주세요</p>
+  <div class="rv t2" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+
+    <!-- 카카오톡 공유 -->
+    <button onclick="shareKakao()"
+      style="display:inline-flex;align-items:center;gap:8px;background:#FEE500;color:#111;border:none;padding:12px 22px;font-size:14px;font-family:Arial,sans-serif;font-weight:700;cursor:pointer;border-radius:4px;-webkit-appearance:none;">
+      💬 카카오톡 공유
+    </button>
+
+    <!-- 링크 복사 -->
+    <button onclick="copyLink()"
+      style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:#C9A84C;border:2px solid #C9A84C;padding:12px 22px;font-size:14px;font-family:Arial,sans-serif;font-weight:700;cursor:pointer;border-radius:4px;-webkit-appearance:none;">
+      🔗 링크 복사
+    </button>
+
+    <!-- 문자 공유 (모바일) -->
+    <a href="sms:?body=AI가 두렵다면 저를 찾으세요 — 김종하 AI 컨설턴트 소개 페이지입니다. https://kimjongha-landing.vercel.app"
+      style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:#B0A898;border:2px solid rgba(176,168,152,.4);padding:12px 22px;font-size:14px;font-family:Arial,sans-serif;font-weight:700;cursor:pointer;border-radius:4px;text-decoration:none;-webkit-text-fill-color:#B0A898;">
+      📱 문자로 공유
+    </a>
+
+  </div>
+  <!-- 복사 완료 메시지 -->
+  <p id="copied-msg" style="font-size:13px;color:#C9A84C;margin-top:12px;display:none;">✅ 링크가 복사됐어요!</p>
+</section>
+
+<hr class="hr">
+
 <!-- CTA -->
 <section style="padding:48px 32px;max-width:860px;margin:0 auto;">
   <div class="cg" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
@@ -303,6 +334,47 @@ window.addEventListener('load',run);
 run();
 setTimeout(run,300);
 setTimeout(run,800);
+</script>
+<!-- 카카오 SDK -->
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script>
+// 카카오 초기화 (JavaScript 키 필요 — 현재는 링크 공유로 대체)
+function shareKakao() {
+  var url = 'https://kimjongha-landing.vercel.app';
+  var text = 'AI가 두렵다면 저를 찾으세요 — 김종하 AI 컨설턴트 소개 페이지';
+  // 카카오 SDK 키 미설정 시 링크 복사로 대체
+  if (navigator.share) {
+    navigator.share({
+      title: 'AI가 두렵다면 저를 찾으세요',
+      text: text,
+      url: url
+    });
+  } else {
+    copyToClipboard(url);
+    document.getElementById('copied-msg').style.display = 'block';
+    setTimeout(function(){ document.getElementById('copied-msg').style.display='none'; }, 2500);
+  }
+}
+
+function copyLink() {
+  copyToClipboard('https://kimjongha-landing.vercel.app');
+  var msg = document.getElementById('copied-msg');
+  msg.style.display = 'block';
+  setTimeout(function(){ msg.style.display='none'; }, 2500);
+}
+
+function copyToClipboard(text) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text);
+  } else {
+    var el = document.createElement('textarea');
+    el.value = text;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  }
+}
 </script>
 </body>
 </html>
