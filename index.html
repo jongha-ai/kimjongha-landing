@@ -7,7 +7,7 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 html,body{margin:0;padding:0;}
-body{font-family:Georgia,'Batang','Times New Roman',serif;background:#0D1B3E;color:#F5F0E8;overflow-x:hidden;}
+body{font-family:Georgia,'Batang','Times New Roman',serif;background:#0D1B3E;color:#F5F0E8;overflow-x:hidden;word-break:keep-all;}
 .gold{color:#C9A84C;}
 .divider{width:40px;height:2px;background:#C9A84C;margin:16px 0;}
 .hr{border:none;border-top:1px solid rgba(201,168,76,0.25);}
@@ -86,7 +86,10 @@ a{-webkit-text-fill-color:inherit;}
 
 @media(max-width:700px){.svc-grid{grid-template-columns:1fr !important;}}
 @media(max-width:640px){
-  .bh{font-size:40px !important;}
+  .bh{font-size:34px !important;}
+  .h4{flex-direction:column;gap:14px !important;}
+  .h4>div{width:100%;}
+  .h4 a{width:100% !important;}
   .sg{grid-template-columns:repeat(2,1fr);}
   .st:nth-child(2){border-right:none;}
   .st:nth-child(3){border-top:1px solid rgba(201,168,76,.2);}
@@ -115,7 +118,7 @@ a{-webkit-text-fill-color:inherit;}
   <div class="h3">
     <div class="divider"></div>
     <p style="font-size:16px;color:#B0A898;line-height:1.9;max-width:480px;margin-bottom:32px;">
-      매일 반복하던 그 업무, 이제 <strong style="color:#F5F0E8;">딸깍 한 번으로 끝냅니다.</strong><br>
+      매일 반복하던 그 업무, 이제 <strong style="color:#F5F0E8;white-space:nowrap;">딸깍 한 번으로 끝냅니다.</strong><br>
       생산성을 갉아먹던 그 일, AI 자동화로 제가 직접 해결해드립니다.
     </p>
   </div>
